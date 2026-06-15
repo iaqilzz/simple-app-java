@@ -16,7 +16,7 @@
     </properties>
 
     <dependencies>
-        <!-- Jakarta EE Web API (Provided by the runtime server) -->
+        <!-- Jakarta EE Web API -->
         <dependency>
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-web-api</artifactId>
@@ -28,27 +28,30 @@
     <build>
         <finalName>ROOT</finalName>
         <plugins>
+            <!-- Dependency Copy Plugin for Heroku Runtime Server -->
             <plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-dependency-plugin</artifactId>
-			    <version>3.6.0</version>
-			    <executions>
-			        <execution>
-			            <phase>package</phase>
-			            <goals><goal>copy</goal></goals>
-			            <configuration>
-			                <artifactItems>
-			                    <artifactItem>
-			                        <groupId>com.heroku</groupId>
-			                        <artifactId>webapp-runner</artifactId>
-			                        <version>10.0.27.0</version>
-			                        <destFileName>webapp-runner.jar</destFileName>
-			                    </artifactItem>
-			                </artifactItems>
-			            </configuration>
-			        </execution>
-			    </executions>
-			</plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.6.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.heroku</groupId>
+                                    <artifactId>webapp-runner</artifactId>
+                                    <version>10.1.25.0</version>
+                                    <destFileName>webapp-runner.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
