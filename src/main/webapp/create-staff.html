@@ -194,13 +194,12 @@
                                 <th>No.</th>
                                 <th>Username</th>
                                 <th>Staff Name</th>
-                                <th>Password</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody id="staffTableBody">
                             <tr class="no-records-row" id="staffNoRecords">
-                                <td colspan="5" class="text-center py-4">No staff records found.</td>
+                                <td colspan="4" class="text-center py-4">No staff records found.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -359,7 +358,7 @@ if (role === "owner") {
         </li>
 
         <li class="nav-item">
-            <a class="nav-link text-warning" href="login.html">
+            <a class="nav-link text-warning" href="index.html">
                 Logout
             </a>
         </li>
@@ -378,14 +377,14 @@ else if (role === "staff") {
         </li>
 
         <li class="nav-item">
-            <a class="nav-link text-warning" href="login.html">Logout</a>
+            <a class="nav-link text-warning" href="index.html">Logout</a>
         </li>
     `;
 }
 
 else {
 
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
         function initializeDummyStaff() {
@@ -421,7 +420,7 @@ else {
             if (staffList.length === 0) {
                 staffTableBody.innerHTML = `
                     <tr class="no-records-row" id="staffNoRecords">
-                        <td colspan="5" class="text-center py-4">No staff records found.</td>
+                        <td colspan="4" class="text-center py-4">No staff records found.</td>
                     </tr>
                 `;
                 staffPaginationInfo.innerText = 'Showing 0 staff records';
@@ -434,7 +433,6 @@ else {
                         <td>${index + 1}</td>
                         <td class="fw-semibold">${staff.username || '-'}</td>
                         <td>${staff.name || '-'}</td>
-                        <td>••••••••</td>
                         <td>
                             <div class="d-flex flex-column flex-sm-row gap-2">
                                 <button class="btn btn-sm btn-update" type="button" onclick="openUpdateStaffModal(${index})">
@@ -564,7 +562,7 @@ else {
             if (visibleCount === 0) {
                 document.getElementById('staffTableBody').innerHTML += `
                     <tr class="no-records-row" id="staffNoRecords">
-                        <td colspan="5" class="text-center py-4">No staff records found.</td>
+                        <td colspan="4" class="text-center py-4">No staff records found.</td>
                     </tr>
                 `;
             }

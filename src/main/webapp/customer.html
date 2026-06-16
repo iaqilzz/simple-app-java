@@ -192,16 +192,16 @@
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Customer Phone</th>
                                 <th>Customer Name</th>
+                                <th>Customer Phone</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody id="customerTableBody">
                             <tr class="customer-row">
                                 <td>1</td>
-                                <td class="fw-semibold">012-3456789</td>
-                                <td>Ahmad Razak</td>
+                                <td class="fw-semibold">Ahmad Razak</td>
+                                <td>012-3456789</td>
                                 <td>
                                     <button class="btn btn-sm btn-update" type="button" data-bs-toggle="modal" data-bs-target="#updateCustomerModal">
                                         <i class="fa-solid fa-pen-to-square"></i>
@@ -211,8 +211,8 @@
                             </tr>
                             <tr class="customer-row">
                                 <td>2</td>
-                                <td class="fw-semibold">013-9876543</td>
-                                <td>Siti Aminah</td>
+                                <td class="fw-semibold">Siti Aminah</td>
+                                <td>013-9876543</td>
                                 <td>
                                     <button class="btn btn-sm btn-update" type="button" data-bs-toggle="modal" data-bs-target="#updateCustomerModal">
                                         <i class="fa-solid fa-pen-to-square"></i>
@@ -222,8 +222,8 @@
                             </tr>
                             <tr class="customer-row">
                                 <td>3</td>
-                                <td class="fw-semibold">014-2223344</td>
-                                <td>Lim Wei</td>
+                                <td class="fw-semibold">Lim Wei</td>
+                                <td>014-2223344</td>
                                 <td>
                                     <button class="btn btn-sm btn-update" type="button" data-bs-toggle="modal" data-bs-target="#updateCustomerModal">
                                         <i class="fa-solid fa-pen-to-square"></i>
@@ -275,12 +275,12 @@
                 <div class="modal-body">
                     <form id="addCustomerForm">
                         <div class="mb-3">
-                            <label for="addCustomerPhone" class="form-label">Customer Phone</label>
-                            <input type="text" class="form-control" id="addCustomerPhone" placeholder="Enter customer phone">
-                        </div>
-                        <div>
                             <label for="addCustomerName" class="form-label">Customer Name</label>
                             <input type="text" class="form-control" id="addCustomerName" placeholder="Enter customer name">
+                        </div>
+                        <div>
+                            <label for="addCustomerPhone" class="form-label">Customer Phone</label>
+                            <input type="text" class="form-control" id="addCustomerPhone" placeholder="Enter customer phone">
                         </div>
                     </form>
                 </div>
@@ -381,7 +381,7 @@ if (role === "owner") {
         </li>
 
         <li class="nav-item">
-            <a class="nav-link text-warning" href="login.html">
+            <a class="nav-link text-warning" href="index.html">
                 Logout
             </a>
         </li>
@@ -400,14 +400,14 @@ else if (role === "staff") {
         </li>
 
         <li class="nav-item">
-            <a class="nav-link text-warning" href="login.html">Logout</a>
+            <a class="nav-link text-warning" href="index.html">Logout</a>
         </li>
     `;
 }
 
 else {
 
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 document.getElementById('addCustomerForm')
 .addEventListener('submit', function(e) {

@@ -162,18 +162,18 @@ if (role === "owner") {
         <li class="nav-item"><a class="nav-link" href="customer.html">Customer</a></li>
         <li class="nav-item"><a class="nav-link" href="create-staff.html">Staff</a></li>
         <li class="nav-item"><a class="nav-link" href="report.html">Report</a></li>
-        <li class="nav-item"><a class="nav-link text-warning" href="login.html">Logout</a></li>
+        <li class="nav-item"><a class="nav-link text-warning" href="index.html">Logout</a></li>
     `;
 }
 else if (role === "staff") {
     navbarMenu.innerHTML = `
         <li class="nav-item"><a class="nav-link active" href="sale.html">Sale</a></li>
         <li class="nav-item"><a class="nav-link" href="customer.html">Customer</a></li>
-        <li class="nav-item"><a class="nav-link text-warning" href="login.html">Logout</a></li>
+        <li class="nav-item"><a class="nav-link text-warning" href="index.html">Logout</a></li>
     `;
 }
 else {
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 const data = [
