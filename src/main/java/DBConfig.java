@@ -12,7 +12,7 @@ public class DBConfig {
 
     public static Connection getConnection() throws SQLException {
         try {
-            // Load Oracle JDBC Driver
+            // load driver
             Class.forName("oracle.jdbc.driver.OracleDriver");
             return DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (ClassNotFoundException e) {
